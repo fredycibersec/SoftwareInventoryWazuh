@@ -14,8 +14,8 @@ endpoint = '/agents?os.name=Microsoft Windows 11 Pro'   # Modifica el nommbre de
 protocol = 'https'
 host = 'localhost'
 port = '55000'
-user = 'WAZUH_USER'
-password = 'WAZUH_PASS'
+user = 'WAZUH_USER'       # Usuario de acceso a la API de Wazuh. No debe ser Admin
+password = 'WAZUH_PASS'   # Password de dicho usuario
 
 # Colors
 OKGREEN = '\033[92m'
@@ -53,7 +53,7 @@ headers = {
            }
 headers['Authorization'] = f'Bearer {get_response("POST", login_url, headers)["data"]["token"]}'
 fecha = current_date_format(datetime.now())
-csv_file = 'SoftwareInventoryWazuh/Inventario_Software_Agentes_Wazuh_'+ fecha +'.csv'  # CSV file path
+csv_file = 'Inventario_Software_Agentes_Wazuh_'+ fecha +'.csv'  # CSV file path
 ruta_smb = 'ruta/al/archivo'
 mes = datetime.month
 anyo = datetime.year
