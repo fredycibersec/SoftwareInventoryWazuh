@@ -1,4 +1,4 @@
-# Software Inventory for Wazuh
+# Software Inventory for Wazuh v1.0
 
 <img src="https://www.servicepilot.com/images/integration/wazuh.png" width="500">
 
