@@ -7,7 +7,6 @@ from base64 import b64encode
 from datetime import datetime
 import requests  # To install requests, use: pip3 install requests
 import urllib3
-import jsmb      # To install jsmb, use: pip3 install pysmb
 
 # Configuration
 endpoint = '/agents?os.name=Microsoft Windows 11 Pro'   # Modifica el nommbre del SO a listar
@@ -91,7 +90,3 @@ with open(csv_file, 'a', newline='', encoding='utf-8') as csvfile:
             }
             writer.writerow(row)
 
-# Subida de fichero a ruta de red SMB 
-con = jsmb.jsmb('ip','user','pass')
-con.mkdir(ruta_smb, mes + anyo)
-con.upload(ruta_smb, csv_file, mes + anyo)
